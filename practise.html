@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Didi!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 60px;
+      animation: glow 2s infinite alternate;
+    }
+    p {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .confetti {
+      font-size: 30px;
+      margin-top: 30px;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff6ec4;
+      }
+      to {
+        text-shadow: 0 0 30px #ffc3a0;
+      }
+    }
+    button {
+      background-color: #fff;
+      color: #ff6ec4;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffe1e9;
+    }
+  </style>
+</head>
+<body>
+  <audio id="birthday-audio" src="happy_birthday.mp3" preload="auto"></audio>
+
+  <h1>🎉 Happy Birthday Didi! 🎂</h1>
+  <p>Kaisi lagi yea website</p>
+  <p>Ha apke boyfriend se idea churaya maine, koi dikkat🤨</p>
+  <p>Jo bhi hai 20 saal ki amma ho gaye kaisa lag raha hai 😂</p>
+  <p> or nahi mai apke bf jitna acha to nahi per jo hai so hai</p>
+
+  <div class="confetti" id="confetti">🎊 🎉 ✨ 💖 🌟</div>
+
+  <button onclick="playSurprise()">Click for a Surprise 🎵</button>
+
+  <script>
+function playSurprise() {
+  alert("🎶 HAA You're still as CHOMU as ever 🎶");
+
+  // Change background to an image
+  document.body.style.backgroundImage = "url('makin-smth-with-this-trust-w-gif.gif')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundPosition = "center";
+  document.body.style.transition = "background 1s ease-in-out";
+
+  // Play the birthday song from <audio>
+  const audio = document.getElementById("birthday-audio");
+  audio.play().catch(error => {
+    console.log("Playback failed:", error);
+    alert("Audio playback failed. Try tapping again!");
+  });
+}
+
+  </script>
+
+</body>
+</html>
